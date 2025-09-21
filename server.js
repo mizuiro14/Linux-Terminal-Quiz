@@ -8,7 +8,7 @@ app.use(express.static("public"))
 
 const PORT = 3000
 const ai = new GoogleGenAI({
-  apiKey: "AIzaSyDoqkPAj2A7Wj1-n2qDaT-RjeDY5w4SY2Q"
+  apiKey: "API-HERE"
 })
 
 let usedQuestions = []
