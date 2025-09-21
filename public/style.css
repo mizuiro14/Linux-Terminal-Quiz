@@ -1,0 +1,82 @@
+/* overall theme */
+body {
+    font-family: monospace;
+    background: #0c0c0c;
+    color: #33ff33;
+    padding: 36px;
+}
+
+h1, h2, h3, p { color: #33ff33; margin: 6px 0; }
+
+.screen { display: none; }
+.active { display: block; }
+
+/* Generic button */
+button {
+    background: #111;
+    color: #33ff33;
+    border: 1px solid #33ff33;
+    padding: 8px 14px;
+    margin: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: monospace;
+}
+button:hover { background: #222; }
+
+/* 2x2 grid pra sa answers */
+#options {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+max-width: 700px;
+margin: 18px auto;
+}
+
+.option {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border-radius: 6px;
+    background: #111;
+    border: 1px solid #33ff33;
+    color: #33ff33;
+    cursor: pointer;
+}
+.option:disabled { opacity: 0.3; cursor: default; }
+
+/* states kung ginselect kg tsakto o indi */
+.option.correct {
+    background: #002B00; 
+    border-color: #0f0;
+    color: #0f0;
+    opacity: 1.0;
+}
+.option.wrong {
+    background: #330000;
+    border-color: #f00;
+    color: #f00;
+    opacity: 1.0;
+}
+
+/* info box for explanation */
+#infoBox {
+display: none;
+margin-top: 12px;
+background: #111;
+padding: 8px 12px;
+border: 1px solid #33ff33;
+border-radius: 6px;
+text-align: left;
+white-space: normal;
+width: fit-content;
+max-width: 100%;
+}
+#infoBox strong { display:inline-block; margin-right:6px; }
+#infoBox pre { margin:6px 0; white-space: pre-wrap; font-family: monospace; }
+
+/* end screen */
+#review { margin-top: 10px; }
+.review-q { margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1px dashed #223; }
+.review-q p.question-title { margin: 0 0 8px 0; }
+.review-q .answer-line { padding: 3px 0; }
